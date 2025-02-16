@@ -1,0 +1,47 @@
+@use "../variables/breakpoints";
+
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  background-image: url('../images/bg.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 30px 0 70px;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0%;
+  max-width: 95%;
+  width: 100%;
+  align-self: center;
+  gap: 30px;
+
+  @media (min-width: breakpoints.$breakpoint-sm-max) {
+    flex-direction: row;
+  }
+
+	@media (min-width: breakpoints.$breakpoint-xl-max) {
+    max-width: 84%;
+  }
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0%;
+  overflow: auto;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}

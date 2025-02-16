@@ -1,0 +1,66 @@
+@use "../variables/colors";
+@use "../variables/breakpoints";
+@use "../variables/animations";
+
+%title {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: colors.$title-color;
+}
+
+.title-1 {
+  @extend %title;
+  font-size: 1.37rem;
+  margin-bottom: 30px;
+
+	@media (min-width: breakpoints.$breakpoint-sm-max) {
+    margin-bottom: 50px;
+  }
+
+	@media (min-width: breakpoints.$breakpoint-lg-max) {
+    font-size: 1.47rem;
+  }
+}
+
+.title-2 {
+  @extend %title;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.text--bold {
+  font-weight: bold;
+}
+
+.highlighted-link {
+		color: colors.$highlight-color-1;
+    letter-spacing: 1px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      transition: animations.$transition;
+    }
+  
+    &:hover {
+      &::after {
+        background-color: colors.$highlight-color-1;
+      }
+    }
+}
+
+.popup-title {
+  @extend %title;
+  font-family: "Montserrat", sans-serif;
+	color: colors.$highlight-color-1;
+  font-size: 1.45rem;
+  text-align: center;
+  font-weight: normal;
+}

@@ -1,0 +1,43 @@
+@use "../../variables/colors";
+@use "../../variables/breakpoints";
+
+.header {
+  width: 95%;
+  align-self: center;
+  margin-bottom: 50px;
+
+	@media (min-width: breakpoints.$breakpoint-xl-max) {
+    width: 84%;
+  }
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 45px;
+
+  @media (min-width: breakpoints.$breakpoint-xxl) {
+    margin-bottom: 90px;
+  }
+}
+
+.header-controls {
+  height: 100%;
+}
+
+.header-contact-buttons {
+  display: flex;
+  gap: 10px;
+  background-color: colors.$form-container;
+  padding: 10px;
+
+	@media (min-width: breakpoints.$breakpoint-sm-max) {
+    gap: 25px;
+  }
+
+  @media (min-width: breakpoints.$breakpoint-lg-max) {
+    background: transparent;
+  }
+}

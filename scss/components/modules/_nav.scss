@@ -1,0 +1,100 @@
+@use "../../variables/animations";
+@use "../../variables/colors";
+@use "../../variables/breakpoints";
+
+.nav {
+  min-width: 0%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  color: colors.$nav-color;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 40px;
+  position: relative;
+
+  @media (min-width: breakpoints.$breakpoint-md) {
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: breakpoints.$breakpoint-lg-max) {
+    font-size: 1.53rem;
+  }
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  background: none;
+  border: none;
+  
+  span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: colors.$graphite;
+    transition: transform 0.3s ease;
+  }
+
+  @media (min-width: breakpoints.$breakpoint-xs-max) {
+    display: none;
+  }
+}
+
+.nav-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: colors.$popup-bg;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 10;
+
+  &.is-active {
+    display: flex;
+    flex-direction: column;
+  }
+    
+  @media (min-width: breakpoints.$breakpoint-xs-max) {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0;
+    height: 100%;
+    box-shadow: none;
+    background-color: transparent;
+    z-index: 0;
+  }
+  @media (min-width: breakpoints.$breakpoint-md) {
+    gap: 20px;
+  }
+}
+  
+.nav-item {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+}
+  
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: animations.$transition;
+
+  &:hover,
+  &.is-active {
+    color: colors.$highlight-color-3;
+  }
+}
+   

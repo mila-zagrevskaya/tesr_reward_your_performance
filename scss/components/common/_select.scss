@@ -1,0 +1,96 @@
+@use "../../variables/colors";
+@use "../../variables/breakpoints";
+
+.form-group {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.select {
+	position: relative;
+	width: 250px;
+	height: 36px;
+	background-color: colors.$light-text;
+	border: 3px solid colors.$forms-border;
+	font-size: 1rem;
+	line-height: 1.15rem;
+	color: colors.$form-color;
+	font-weight: 400;
+
+	@media (min-width: breakpoints.$breakpoint-sm-max) {
+		width: 321px;
+	}
+
+	@media (min-width: breakpoints.$breakpoint-sm-max) {
+		height: 46px;
+		font-size: 1.15rem;
+		line-height: 1.25rem;	
+	}
+
+	@media (min-width: breakpoints.$breakpoint-lg-max) {
+		height: 56px;
+	}
+}
+
+.select-trigger {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid colors.$forms-border;
+	border-radius: 4px;
+	background-color: colors.$form-bg;
+	cursor: pointer;
+	height: 100%;
+}
+
+.select-placeholder {
+	padding: 12px;
+	display: block;
+	color: colors.$form-color;
+}
+
+.select-toggle {
+	background-color: colors.$forms-border;
+	height: 100%;
+	width: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@media (min-width: breakpoints.$breakpoint-sm-max) {
+		width: 34px;
+	}
+}
+
+.select-options {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background-color: colors.$form-bg;
+	border: 1px solid colors.$forms-border;
+	border-radius: 4px;
+	margin-top: 4px;
+	z-index: 10;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+	.select.is-open & {
+		display: block;
+	}
+}
+
+.option {
+	padding: 10px;
+	line-height: 1.25em;
+	cursor: pointer;
+
+	&:hover,
+	&.selected {
+		background-color: colors.$form-highlight;
+		color: colors.$light-text;
+	}
+}

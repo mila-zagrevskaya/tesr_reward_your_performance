@@ -1,0 +1,155 @@
+@use "../../variables/colors";
+@use "../../variables/breakpoints";
+@use "../../variables/animations";
+
+.side-nav-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	@media (min-width: breakpoints.$breakpoint-sm-max) {
+		flex-direction: column;
+		gap: 20px;
+	}
+}
+
+.side-nav-item {
+	width: 48%;
+	height: 100px;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	@media (min-width: breakpoints.$breakpoint-sm-max) {
+		width: 100%;
+		height: 111px;
+	}
+
+	@media (min-width: breakpoints.$breakpoint-md-max) {
+		height: 131px;
+	}
+}
+
+.shopping {
+    background-image: url('../images/sidebar/shopping_bg.png');
+}
+
+.budget {
+    background-image: url('../images/sidebar/budget_bg.png');
+}
+
+.badges {
+    background-image: url('../images/sidebar/badges_bg.png');
+}
+
+.awards {
+    background-image: url('../images/sidebar/awards_bg.png');
+}
+
+.quizzes {
+    background-image: url('../images/sidebar/quizzes_bg.png');
+}
+
+.redeem {
+    background-image: url('../images/sidebar/on_the_spot_awardbg.png');
+	padding: 15px;
+	transition: animations.$transition;
+
+	&:hover {
+		color: colors.$highlight-color-3;
+		box-shadow: 0 7px 6px colors.$highlight-color-3;
+	}
+
+	@media (min-width: breakpoints.$breakpoint-md-max) {
+		padding: 20px;
+	}
+}
+
+.side-nav-link {
+    font-family: "Montserrat", sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 3px;
+	padding: 15px;
+	height: 100%;
+	transition: animations.$transition;
+
+	.redeem & {
+		flex-direction: column;
+	}
+
+	&:hover {
+		box-shadow: 0 7px 6px colors.$highlight-color-3;
+	}
+
+	
+	@media (min-width: breakpoints.$breakpoint-md-max) {
+		flex-direction: row;
+		padding: 20px;
+	}
+}
+
+.side-nav-text {
+	font-size: 1em;
+	display: block;
+	transition: animations.$transition;
+
+	.side-nav-link:hover & {
+		color: colors.$highlight-color-3;
+	}
+
+	@media (min-width: breakpoints.$breakpoint-xxl) {
+		font-size: 1.14em;
+	}
+}
+
+.side-nav-preview {
+	text-align: end;
+}
+
+.side-nav-points {
+	display: block;
+	font-size: 1.45em;
+	font-weight: 300;
+	line-height: 1em;
+
+	@media (min-width: breakpoints.$breakpoint-xxl) {
+		font-size: 1.85em;
+	}
+}
+
+.side-nav-points-name {
+	font-size: .9rem;
+
+	@media (min-width: breakpoints.$breakpoint-xxl) {
+		font-size: 1.15rem;
+	}
+} 
+
+.redeem-text-field {
+	width: 100%;
+	height: 26px;
+	background-color: rgba(255,255,255,0.30196078431372547);
+	border: 2px solid #ffffff30;
+	margin-top: 5px;
+	color: colors.$light-text;
+	outline: none;
+	padding: 0 15px;
+	font-size: 1rem;
+	letter-spacing: 2px;
+
+	&:focus {
+		background-color: rgba(255,255,255,0.30196078431372547);
+	}
+
+	@media (min-width: breakpoints.$breakpoint-xs-max) {
+		margin-top: 10px;
+		height: 32px;
+	}
+	
+	@media (min-width: breakpoints.$breakpoint-xxl) {
+		height: 42px;
+		font-size: 1.15rem;
+	}
+}

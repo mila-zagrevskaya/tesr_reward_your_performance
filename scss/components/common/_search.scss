@@ -1,0 +1,51 @@
+@use "../../variables/animations";
+@use "../../variables/colors";
+@use "../../variables/breakpoints";
+
+.search {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	gap: 15px;
+
+	@media (min-width: breakpoints.$breakpoint-sm-max) {
+		flex-direction: row;
+		gap: 24px;
+	}
+
+	@media (min-width: breakpoints.$breakpoint-md) {
+		width: 77%;
+	}
+}
+
+.search-label {
+	font-size: 1.15rem;
+	letter-spacing: 2px;
+	font-weight: 400;
+	display: inline-block;
+	align-self: center;
+	color: colors.$label-color;
+}
+
+.search-input {
+	opacity: 0.2;
+	height: 28px;
+	flex: 1;
+	background-color: colors.$search-bg;
+	border: none;
+	max-width: 1063px;
+	color: colors.$light-text;
+	outline: none;
+	padding: 2px 15px;
+	font-size: 1.15rem;
+	letter-spacing: 2px;
+
+	&:focus {
+		background-color: colors.$search-bg;
+	}
+
+	@media (min-width: breakpoints.$breakpoint-xl-max) {
+		height: 38px;
+	}
+}

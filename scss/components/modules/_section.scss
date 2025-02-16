@@ -1,0 +1,31 @@
+@use "../../variables/colors";
+@use "../../variables/breakpoints";
+
+.send-rewards-form {
+	border: none;
+}
+
+.section {
+	margin-bottom: 40px;
+}
+
+.recognition-description {
+	font-size: 1rem;
+	line-height: 1.26em;
+	font-weight: 300;
+
+	@media (min-width: breakpoints.$breakpoint-xs-max) {
+		font-size: 1.2rem;
+		line-height: 1.36em;
+	}
+}
+
+.recognition-form {
+	max-width: 320px;
+	margin-top: 25px;
+
+	@media (min-width: breakpoints.$breakpoint-sm-max) {
+		min-width: 480px;
+		width: 30%;
+	}
+}

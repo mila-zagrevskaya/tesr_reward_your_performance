@@ -1,0 +1,137 @@
+@use "../../variables/colors";
+@use "../../variables/breakpoints";
+
+.preview {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 25px;
+
+	@media (min-width: breakpoints.$breakpoint-md-max) {
+		flex-direction: row;
+	}
+}
+
+.preview-card {
+	display: flex;
+	align-items: stretch;
+	overflow: hidden;
+	background-color: colors.$preview-card-bg;
+	height: 300px;
+	width: 100%;
+	min-width: 318px;
+
+	@media (min-width: breakpoints.$breakpoint-xs-max) {
+		height: 420px;
+	}
+
+	@media (min-width: breakpoints.$breakpoint-md-max) {
+		width: 65%;
+	}
+	
+	@media (min-width: breakpoints.$breakpoint-lg-max) {
+		width: 60%;
+	}
+	
+	@media (min-width: breakpoints.$breakpoint-xxl) {
+		height: 540px;
+		width: 55%;
+	}
+}
+
+.preview-card-image {
+	width: 80%;
+	max-width: 420px;
+	overflow: hidden;
+}
+
+.preview-card-content {
+	font-size: .7em;
+	line-height: 1.15em;
+	color: colors.$light-text;
+	width: 43%;
+	min-width: 200px;
+	padding: 25px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+
+	@media (min-width: breakpoints.$breakpoint-lg-max) {
+		min-width: 250px;
+	}
+
+	@media (min-width: breakpoints.$breakpoint-xxl) {
+		min-width: 318px;
+	}
+}
+
+.preview-card-title,
+.preview-card-author,
+.preview-card-date {
+	color: colors.$highlight-color-2;
+	font-weight: 600;
+}
+
+.preview-card-title {
+	margin-bottom: 15px;
+	@media (min-width: breakpoints.$breakpoint-xs-max) {
+		margin-bottom: 25px;
+	}
+}
+
+.preview-card-author {
+	display: block;
+	margin-top: 20px;
+}
+
+.preview-card-message {
+	flex: 1;
+	font-weight: 300;
+}
+
+.preview-card-date {
+	text-align: end;
+}
+
+.preview-photo-gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	flex-wrap: wrap;
+	align-items: start;
+	gap: 20px;
+
+	@media (min-width: breakpoints.$breakpoint-sm-max) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@media (min-width: breakpoints.$breakpoint-md-max) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (min-width: breakpoints.$breakpoint-lg-max) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.thumbnail-photo {
+	width: 105px;
+	height: 105px;
+	overflow: hidden;
+
+	&.is-selected {
+		border: 7px solid colors.$highlight-color-3;
+	}
+}
+
+img {
+	.preview-card-image &,
+	.thumbnail-photo & {
+		height: 100%;
+		object-fit: cover;
+
+		@media (max-width: breakpoints.$breakpoint-sm-max) {
+			object-position: 85%;
+			aspect-ratio: 1 / 1;
+		}
+	}
+}

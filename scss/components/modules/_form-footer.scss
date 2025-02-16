@@ -1,0 +1,46 @@
+@use "../../variables/colors";
+@use "../../variables/breakpoints";
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  justify-content: space-between;
+
+  @media (min-width: breakpoints.$breakpoint-md-max) {
+		flex-direction: row;
+	}
+}
+
+.form-footer-copy-section{
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  @media (min-width: breakpoints.$breakpoint-md-max) {
+    gap: 20px;
+  }
+} 
+
+.form-footer-input {
+  opacity: 0.600;
+  width: 70%;
+  background-color: colors.$form-container;
+  border: 3px solid colors.$forms-border;
+  padding: 5px 10px;
+  font-size: 1rem;
+
+	@media (min-width: breakpoints.$breakpoint-xs-max) {
+    font-size: 1.15rem;
+    padding: 10px 15px;
+  }
+
+  @media (min-width: breakpoints.$breakpoint-md-max) {
+    width: 65%;
+	}
+}
+
+.form-footer-buttons {
+  display: flex;
+  justify-content: center;
+}

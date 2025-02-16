@@ -1,0 +1,52 @@
+@use "../variables/colors";
+@use "../variables/breakpoints";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: "Open Sans", serif;
+  font-size: 14px;
+  line-height: 1.14;
+  color: colors.$graphite;
+
+	@media (min-width: breakpoints.$breakpoint-sm-max) {
+    font-size: 16px;
+  }
+
+  @media (min-width: breakpoints.$breakpoint-xl) {
+    font-size: 20px;
+  }
+
+  @media (min-width: breakpoints.$breakpoint-xxl) {
+    font-size: 24px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+*,
+*:active,
+*:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

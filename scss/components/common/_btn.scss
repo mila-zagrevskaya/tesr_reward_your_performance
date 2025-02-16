@@ -1,0 +1,82 @@
+@use "../../variables/animations";
+@use "../../variables/colors";
+@use "../../variables/breakpoints";
+
+%btn {
+  border: none;
+  background: transparent;
+  white-space: nowrap;
+  font-family: inherit;
+  cursor: pointer;
+  transition: animations.$transition;
+
+  &:disabled,
+  &.disabled {
+    color: colors.$white;
+    background-color: colors.$medium-gray;
+    border-color: colors.$medium-gray;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+.top-nav-button {
+  @extend %btn;
+}
+
+.popup-btn {
+  @extend %btn;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 5px 15px;
+  width: 100px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: colors.$main-content-color;
+}
+
+.approve-btn {
+  border: 1px solid colors.$highlight-color-2;
+
+  &:hover {
+    box-shadow: 0 4px 8px colors.$highlight-color-2;
+  }
+}
+
+.cancel-btn {
+  border: 1px solid colors.$highlight-color-1;
+
+  &:hover {
+    box-shadow: 0 4px 8px colors.$highlight-color-1;
+  }
+}
+
+.form-footer-button {
+  @extend %btn;
+  background-color: colors.$highlight-color-3;
+  color: colors.$light-text;
+  font-size: 1rem;
+  line-height: 1.15rem;
+  font-weight: 600;
+  height: 36px;
+  padding: 10px 15px;
+
+  &:hover {
+    background-color: colors.$highlight-color-2;
+  }
+
+	@media (min-width: breakpoints.$breakpoint-xs-max) {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    height: 46px;
+  }
+
+	@media (min-width: breakpoints.$breakpoint-md-max) {
+    padding: 10px 25px;
+  }
+
+  @media (min-width: breakpoints.$breakpoint-xl-max) {
+    height: 56px;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+	}
+}
