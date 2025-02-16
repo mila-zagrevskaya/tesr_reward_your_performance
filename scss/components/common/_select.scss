@@ -1,5 +1,6 @@
 @use "../../variables/colors";
 @use "../../variables/breakpoints";
+@use "../../variables/animations";
 
 .form-group {
 	display: flex;
@@ -44,6 +45,11 @@
 	background-color: colors.$form-bg;
 	cursor: pointer;
 	height: 100%;
+	transition: animations.$transition;
+
+	&:hover {
+		box-shadow: 0 1px 6px colors.$highlight-color-3;
+	}
 }
 
 .select-placeholder {

@@ -813,8 +813,10 @@ a {
   width: 105px;
   height: 105px;
   overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
-.thumbnail-photo.is-selected {
+.thumbnail-photo.is-selected, .thumbnail-photo:hover {
   border: 7px solid #b1cbd9;
 }
 
@@ -1206,6 +1208,10 @@ a {
   background-color: #fff;
   cursor: pointer;
   height: 100%;
+  transition: 0.2s ease;
+}
+.select-trigger:hover {
+  box-shadow: 0 1px 6px #b1cbd9;
 }
 
 .select-placeholder {
@@ -1266,6 +1272,11 @@ a {
   font-weight: 300;
   padding: 20px 15px;
   resize: none;
+}
+.textarea::placeholder {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
 }
 @media (min-width: 767px) {
   .textarea {

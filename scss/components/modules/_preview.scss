@@ -1,5 +1,6 @@
 @use "../../variables/colors";
 @use "../../variables/breakpoints";
+@use "../../variables/animations";
 
 .preview {
 	display: flex;
@@ -117,8 +118,11 @@
 	width: 105px;
 	height: 105px;
 	overflow: hidden;
+	cursor: pointer;
+	transition: animations.$transition;
 
-	&.is-selected {
+	&.is-selected,
+	&:hover {
 		border: 7px solid colors.$highlight-color-3;
 	}
 }
