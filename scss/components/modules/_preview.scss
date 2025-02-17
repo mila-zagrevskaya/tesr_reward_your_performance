@@ -96,7 +96,7 @@
 
 .preview-photo-gallery {
 	display: grid;
-	grid-template-columns: repeat(3, 110px);
+	grid-template-columns: repeat(3, 1fr);
 	flex-wrap: wrap;
 	align-items: start;
 	gap: 10px;
@@ -115,6 +115,7 @@
 }
 
 .thumbnail-photo {
+	width: 110px;
 	height: 110px;
 	overflow: hidden;
 	cursor: pointer;
