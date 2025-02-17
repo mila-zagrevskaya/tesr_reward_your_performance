@@ -6,6 +6,7 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	gap: 10px;
 
 	@media (min-width: breakpoints.$breakpoint-sm-max) {
@@ -99,6 +100,14 @@
 		color: colors.$highlight-color-3;
 	}
 
+	.redeem & {
+		margin-bottom: 5px;
+
+		@media (min-width: breakpoints.$breakpoint-xs-max) {
+			margin-bottom: 10px;
+		}
+	}
+
 	@media (min-width: breakpoints.$breakpoint-xxl) {
 		font-size: 1.14em;
 	}
@@ -132,19 +141,19 @@
 	height: 26px;
 	background-color: rgba(255,255,255,0.30196078431372547);
 	border: 2px solid #ffffff30;
-	margin-top: 5px;
 	color: colors.$light-text;
 	outline: none;
 	padding: 0 15px;
 	font-size: 1rem;
 	letter-spacing: 2px;
+	transition: animations.$transition;
 
-	&:focus {
-		background-color: rgba(255,255,255,0.30196078431372547);
+	&:focus,
+	&:hover {
+		background-color: colors.$white-opacity;
 	}
 
 	@media (min-width: breakpoints.$breakpoint-xs-max) {
-		margin-top: 10px;
 		height: 32px;
 	}
 	

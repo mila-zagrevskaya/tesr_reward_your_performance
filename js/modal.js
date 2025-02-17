@@ -1,22 +1,22 @@
-const openPopupButton = document.getElementById("openPopup");
-const closePopupButton = document.getElementById("closePopup");
-const cancelPopupButton = document.getElementById("cancelPopup");
-const popup = document.getElementById("addUserPopup");
+const openModalButton = document.getElementById("jsOpenModal");
+const closeModalButton = document.getElementById("jsCloseModal");
+const cancelModalButton = document.getElementById("jsCancelModal");
+const modal = document.getElementById("jsAddUserModal");
 
-openPopupButton.addEventListener("click", () => {
-	popup.style.display = "flex";
+openModalButton.addEventListener("click", () => {
+	modal.style.display = "flex";
 });
 
-closePopupButton.addEventListener("click", () => {
-	popup.style.display = "none";
+closeModalButton.addEventListener("click", () => {
+	modal.style.display = "none";
 });
 
-cancelPopupButton.addEventListener("click", () => {
-	popup.style.display = "none";
+cancelModalButton.addEventListener("click", () => {
+	modal.style.display = "none";
 });
 
 window.addEventListener("click", (event) => {
-	if (event.target === popup) {
-		popup.style.display = "none";
+	if (event.target === modal) {
+		modal.style.display = "none";
 	}
 });

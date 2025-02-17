@@ -29,7 +29,7 @@
 }
 
 .search-input {
-	opacity: 0.2;
+	opacity: 0.3;
 	height: 28px;
 	flex: 1;
 	background-color: colors.$search-bg;
@@ -40,9 +40,11 @@
 	padding: 2px 15px;
 	font-size: 1.15rem;
 	letter-spacing: 2px;
+	transition: animations.$transition;
 
-	&:focus {
-		background-color: colors.$search-bg;
+	&:focus,
+	&:hover {
+		background-color: colors.$search-hover;
 	}
 
 	@media (min-width: breakpoints.$breakpoint-xl-max) {

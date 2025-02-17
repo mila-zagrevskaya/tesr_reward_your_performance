@@ -1,5 +1,6 @@
 @use "../../variables/colors";
 @use "../../variables/breakpoints";
+@use "../../variables/animations";
 
 .textarea {
 	width: 100%;
@@ -12,11 +13,17 @@
 	font-weight: 300;
 	padding: 20px 15px;
 	resize: none;
+	transition: animations.$transition;
 
 	&::placeholder {
 		color: colors.$light-text;
 		font-size: 1.2rem;
 		line-height: 1.4rem;	
+	}
+
+	&:hover,
+	&:focus {
+		background-color: colors.$highlight-color-2;
 	}
 
 	@media (min-width: breakpoints.$breakpoint-xs-max) {

@@ -1,7 +1,7 @@
 //add chip
-document.getElementById("addChip").addEventListener("click", () => {
-	const popup = document.getElementById("addUserPopup");
-	const input = document.getElementById("chipInput");
+document.getElementById("jsAddChip").addEventListener("click", () => {
+	const modal = document.getElementById("jsAddUserModal");
+	const input = document.getElementById("jsChipInput");
 	const text = input.value.trim();
 
 	if (text) {
@@ -11,9 +11,9 @@ document.getElementById("addChip").addEventListener("click", () => {
             <span class="chip-text">${text}</span>
             <button class="chip-close">&times;</button>
         `;
-		document.getElementById("chipsContainer").appendChild(chip);
+		document.getElementById("jsChipsContainer").appendChild(chip);
 		input.value = "";
-		popup.style.display = "none";
+		modal.style.display = "none";
 
 		chip.querySelector(".chip-close").addEventListener("click", () => {
 			chip.remove();

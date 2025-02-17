@@ -2,18 +2,18 @@
 @use "../../variables/breakpoints";
 
 .sidebar {
-  width: 100%;
+  flex: 1 1 100%;
   display: flex;
   flex-direction: column;
   color: colors.$light-text;
   font-family: "Montserrat", sans-serif;
 
   @media (min-width: breakpoints.$breakpoint-sm-max) {
-    width: 28%;
+    flex: 1 1 28%;
   }
 
   @media (min-width: breakpoints.$breakpoint-xl-max) {
-    width: 23%;
+    flex: 1 1 23%;
     min-width: 496px;
   }
 }

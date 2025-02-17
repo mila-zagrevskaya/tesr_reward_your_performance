@@ -2,16 +2,16 @@
 @use "../variables/breakpoints";
 @use "../variables/animations";
 
-%title {
+%heading {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 0;
   font-weight: normal;
   text-transform: uppercase;
-  color: colors.$title-color;
+  color: colors.$heading-color;
 }
 
-.title-1 {
-  @extend %title;
+.heading-1 {
+  @extend %heading;
   font-size: 1.37rem;
   margin-bottom: 30px;
 
@@ -24,10 +24,14 @@
   }
 }
 
-.title-2 {
-  @extend %title;
+.heading-2 {
+  @extend %heading;
   font-size: 1.2rem;
   margin-bottom: 20px;
+
+  .modal & {
+    margin-bottom: 0;
+  }
 }
 
 .text--bold {
@@ -54,13 +58,4 @@
         background-color: colors.$highlight-color-1;
       }
     }
-}
-
-.popup-title {
-  @extend %title;
-  font-family: "Montserrat", sans-serif;
-	color: colors.$highlight-color-1;
-  font-size: 1.45rem;
-  text-align: center;
-  font-weight: normal;
 }

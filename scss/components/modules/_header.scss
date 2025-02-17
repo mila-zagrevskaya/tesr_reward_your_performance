@@ -2,13 +2,7 @@
 @use "../../variables/breakpoints";
 
 .header {
-  width: 95%;
-  align-self: center;
   margin-bottom: 50px;
-
-	@media (min-width: breakpoints.$breakpoint-xl-max) {
-    width: 84%;
-  }
 }
 
 .header-inner {

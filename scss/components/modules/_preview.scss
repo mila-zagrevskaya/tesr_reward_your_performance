@@ -85,7 +85,7 @@
 	margin-top: 20px;
 }
 
-.preview-card-message {
+.preview-card-post {
 	flex: 1;
 	font-weight: 300;
 }
@@ -96,10 +96,10 @@
 
 .preview-photo-gallery {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 110px);
 	flex-wrap: wrap;
 	align-items: start;
-	gap: 20px;
+	gap: 10px;
 
 	@media (min-width: breakpoints.$breakpoint-sm-max) {
 		grid-template-columns: repeat(4, 1fr);
@@ -115,27 +115,20 @@
 }
 
 .thumbnail-photo {
-	width: 105px;
-	height: 105px;
+	height: 110px;
 	overflow: hidden;
 	cursor: pointer;
+	border: 7px solid transparent;
 	transition: animations.$transition;
 
 	&.is-selected,
 	&:hover {
-		border: 7px solid colors.$highlight-color-3;
+		border-color: colors.$highlight-color-3;
 	}
 }
 
-img {
-	.preview-card-image &,
-	.thumbnail-photo & {
-		height: 100%;
-		object-fit: cover;
-
-		@media (max-width: breakpoints.$breakpoint-sm-max) {
-			object-position: 85%;
-			aspect-ratio: 1 / 1;
-		}
-	}
+.card-image {
+	height: 100%;
+	object-fit: cover;
+	aspect-ratio: 1 / 1;
 }

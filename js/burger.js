@@ -1,5 +1,5 @@
-const burger = document.getElementById("burger");
-const navLinks = document.getElementById("navLinks");
+const burger = document.getElementById("jsBurger");
+const navLinks = document.getElementById("jsNavigationLinks");
 
 burger.addEventListener("click", () => {
 	const expanded = burger.getAttribute("aria-expanded") === "true" || false;

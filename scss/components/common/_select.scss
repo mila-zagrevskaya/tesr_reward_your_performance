@@ -15,7 +15,7 @@
 	width: 250px;
 	height: 36px;
 	background-color: colors.$light-text;
-	border: 3px solid colors.$forms-border;
+	border: 3px solid colors.$form-border;
 	font-size: 1rem;
 	line-height: 1.15rem;
 	color: colors.$form-color;
@@ -40,7 +40,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border: 1px solid colors.$forms-border;
+	border: 1px solid colors.$form-border;
 	border-radius: 4px;
 	background-color: colors.$form-bg;
 	cursor: pointer;
@@ -59,7 +59,7 @@
 }
 
 .select-toggle {
-	background-color: colors.$forms-border;
+	background-color: colors.$form-border;
 	height: 100%;
 	width: 24px;
 	display: flex;
@@ -78,7 +78,7 @@
 	left: 0;
 	width: 100%;
 	background-color: colors.$form-bg;
-	border: 1px solid colors.$forms-border;
+	border: 1px solid colors.$form-border;
 	border-radius: 4px;
 	margin-top: 4px;
 	z-index: 10;

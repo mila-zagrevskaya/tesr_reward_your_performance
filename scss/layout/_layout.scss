@@ -1,11 +1,8 @@
 @use "../variables/breakpoints";
 
 .page-container {
-  width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-self: center;
   background-image: url('../images/bg.webp');
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,21 +15,14 @@
   flex-direction: column;
   flex: 1 1 auto;
   min-width: 0%;
-  max-width: 95%;
-  width: 100%;
-  align-self: center;
   gap: 30px;
 
   @media (min-width: breakpoints.$breakpoint-sm-max) {
     flex-direction: row;
   }
-
-	@media (min-width: breakpoints.$breakpoint-xl-max) {
-    max-width: 84%;
-  }
 }
 
-.content {
+.main {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -42,6 +32,9 @@
 }
 
 .container {
-  width: 100%;
-  margin: 0 auto;
+  margin: 0 30px;
+
+  @media (min-width: breakpoints.$breakpoint-xl-max) {
+    margin: 0 90px;
+  }
 }

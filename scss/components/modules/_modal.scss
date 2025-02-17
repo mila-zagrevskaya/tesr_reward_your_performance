@@ -2,7 +2,7 @@
 @use "../../variables/breakpoints";
 @use "../../variables/animations";
 
-.popup {
+.modal {
     display: none;
     position: fixed;
     top: 0;
@@ -16,8 +16,8 @@
 	font-family: "Montserrat", sans-serif;
 }
 
-.popup-content {
-    background-color: colors.$popup-bg;
+.modal-content {
+    background-color: colors.$modal-bg;
     padding: 30px;
     border-radius: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -31,7 +31,7 @@
 	align-items: center;
 }
 
-.close-popup {
+.close-modal {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -39,29 +39,30 @@
     cursor: pointer;
 }
 
-.close-popup{
+.close-modal{
 	&:hover {
 		color: colors.$highlight-color-1;
 	}
 }
 
-.popup-input{
+.modal-input{
 	height: 42px;
-	background-color: colors.$popup-input;
-	border: none;
 	width: 100%;
-	color: colors.$light-text;
 	outline: none;
-	padding: 2px 15px;
+
+	opacity: 0.600;
+	background-color: colors.$form-container;
+	border: 3px solid colors.$modal-input;
+	padding: 5px 10px;
 	font-size: 1rem;
 	letter-spacing: 2px;
 
-	&::placeholder {
-		color: colors.$light-text;
+	&:focus {
+		border: 3px solid colors.$highlight-color-2;
 	}
 }
 
-.popup-controls {
+.modal-controls {
 	display: flex;
 	gap: 15px;
 }
